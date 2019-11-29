@@ -1,0 +1,12 @@
+{% if latest_lists %}
+{% for post in latest_lists %}
+<a href="/blrogapp/{{post.id}}">
+    <h1>{{post.title}}</h1>
+    <p>{{post.author}}</p>
+    <p>{{post.date}}</p>
+</a>
+<hr>
+{% endfor %}
+{% else %}
+No Posts
+{% endif %}
